@@ -249,17 +249,15 @@ export default function Home({ accessToken }: Props) {
                         <FontAwesomeIcon icon={faEdit as IconProp} />
                       </Link>
                     </td>
-                    <td
-                      className="border border-white/40 text-center cursor-pointer"
-                      onClick={() => CopyProcess(p["_id"])}
-                    >
-                      <FontAwesomeIcon icon={faCopy as IconProp} />
+                    <td className="border border-white/40 text-center">
+                      <button onClick={() => CopyProcess(p["_id"])}>
+                        <FontAwesomeIcon icon={faCopy as IconProp} />
+                      </button>
                     </td>
-                    <td
-                      className="border border-white/40 text-center cursor-pointer"
-                      onClick={() => openConfirmModal(p["_id"])}
-                    >
-                      <FontAwesomeIcon icon={faTrash as IconProp} />
+                    <td className="border border-white/40 text-center">
+                      <button onClick={() => openConfirmModal(p["_id"])}>
+                        <FontAwesomeIcon icon={faTrash as IconProp} />
+                      </button>
                     </td>
                   </tr>
                 );
