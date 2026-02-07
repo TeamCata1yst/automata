@@ -171,14 +171,15 @@ export default function Home({ accessToken }: Props) {
                 <th className="border border-white/40 p-3">Email</th>
                 <th className="border border-white/40 p-3">Mobile</th>
                 <th className="border border-white/40 p-3">
-                  Password&nbsp;&nbsp;&nbsp;
-                  <FontAwesomeIcon
-                    icon={faEdit as IconProp}
-                    className="cursor-pointer"
+                  Password
+                  <button
+                    className="cursor-pointer pl-4"
                     onClick={() => {
                       setPasswordEdit(false);
                     }}
-                  />
+                  >
+                    <FontAwesomeIcon icon={faEdit as IconProp} />
+                  </button>
                 </th>
                 <th className="border border-white/40 p-3">Delete</th>
               </tr>
@@ -224,11 +225,13 @@ export default function Home({ accessToken }: Props) {
                         }}
                       />
                     </td>
-                    <td
-                      className="border border-white/40 text-white/60 hover:text-white/70 transition cursor-pointer text-center"
-                      onClick={() => confirmModal(c["id"])}
-                    >
-                      <FontAwesomeIcon icon={faTrash as IconProp} />
+                    <td className="border border-white/40 text-white/60 hover:text-white/70 transition">
+                      <button
+                        onClick={() => confirmModal(c["id"])}
+                        className="w-full cursor-pointer text-center"
+                      >
+                        <FontAwesomeIcon icon={faTrash as IconProp} />
+                      </button>
                     </td>
                   </tr>
                 );

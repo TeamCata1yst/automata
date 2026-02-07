@@ -314,20 +314,26 @@ export default function Home({ accessToken, d_id }: Props) {
                           </select>
                         )}
                       </td>
-                      <td
-                        className="border border-white/40 text-white/60 hover:text-white/70 transition cursor-pointer text-center"
-                        onClick={() => deleteUser(r["id"])}
-                      >
-                        <FontAwesomeIcon icon={faTrash as IconProp} />
+                      <td className="border border-white/40 text-white/60 hover:text-white/70 transition">
+                        <button
+                          type="button"
+                          className="w-full cursor-pointer text-center"
+                          onClick={() => deleteUser(r["id"])}
+                        >
+                          <FontAwesomeIcon icon={faTrash as IconProp} />
+                        </button>
                       </td>
-                      <td
-                        className="border border-white/40 text-white/60 hover:text-white/70 transition cursor-pointer text-center"
-                        onClick={() => {
-                          resources[i].edit = true;
-                          setResources([...resources]);
-                        }}
-                      >
-                        <FontAwesomeIcon icon={faUserEdit as IconProp} />
+                      <td className="border border-white/40 text-white/60 hover:text-white/70 transition">
+                        <button
+                          type="button"
+                          className="cursor-pointer text-center w-full"
+                          onClick={() => {
+                            resources[i].edit = true;
+                            setResources([...resources]);
+                          }}
+                        >
+                          <FontAwesomeIcon icon={faUserEdit as IconProp} />
+                        </button>
                       </td>
                     </tr>
                   );
@@ -383,16 +389,20 @@ export default function Home({ accessToken, d_id }: Props) {
                     </tr>
                   );
                 })}
+              </tbody>
+              <tfoot>
                 <tr className="bg-black">
-                  <td
-                    colSpan={7}
-                    onClick={addRow}
-                    className="p-2 text-center text-lg w-full cursor-pointer"
-                  >
-                    +
+                  <td colSpan={7}>
+                    <button
+                      type="button"
+                      onClick={addRow}
+                      className="p-2 text-center text-lg w-full cursor-pointer"
+                    >
+                      +
+                    </button>
                   </td>
                 </tr>
-              </tbody>
+              </tfoot>
             </table>
 
             <div className="buttonBox">

@@ -262,6 +262,8 @@ export default function Home({ accessToken }: Props) {
                   </tr>
                 );
               })}
+            </tbody>
+            <tfoot>
               <tr className="bg-black">
                 <td colSpan={6}>
                   <Link
@@ -272,7 +274,7 @@ export default function Home({ accessToken }: Props) {
                   </Link>
                 </td>
               </tr>
-            </tbody>
+            </tfoot>
           </table>
         </>
       )}
