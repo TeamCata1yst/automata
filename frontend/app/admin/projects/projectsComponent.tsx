@@ -256,20 +256,22 @@ export default function Home({ accessToken }: Props) {
                       {pr["name"]}
                     </h3>
                     <div className="w-full space-x-3 text-center ">
-                      <FontAwesomeIcon
-                        icon={faTrash as IconProp}
+                      <button
                         className="text-white cursor-pointer"
                         onClick={() => {
                           openConfirmModal(pr["id"]);
                         }}
-                      />
-                      <FontAwesomeIcon
-                        icon={faEdit as IconProp}
+                      >
+                        <FontAwesomeIcon icon={faTrash as IconProp} />
+                      </button>
+                      <button
                         className="text-white cursor-pointer"
                         onClick={() => {
                           location.replace(`/admin/projects/${pr["id"]}`);
                         }}
-                      />
+                      >
+                        <FontAwesomeIcon icon={faEdit as IconProp} />
+                      </button>
                     </div>
                   </div>
 
