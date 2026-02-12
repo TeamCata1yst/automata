@@ -78,19 +78,19 @@ export default function Navbar({ instance, username, avatarUrl }: Props) {
               </div>
             </small>
             {instance == "resource" ? (
-              <FontAwesomeIcon
-                icon={faSignOut as IconProp}
-                className="cursor-pointer text-white h-6"
-                id="logOutIcon"
-                onClick={handleResourceLogout}
-              />
+              <button onClick={handleResourceLogout}>
+                <FontAwesomeIcon
+                  icon={faSignOut as IconProp}
+                  className="cursor-pointer text-white h-6"
+                />
+              </button>
             ) : (
-              <FontAwesomeIcon
-                icon={faSignOut as IconProp}
-                className="cursor-pointer h-6 text-white"
-                id="logOutIcon"
-                onClick={handleClientLogout}
-              />
+              <button onClick={handleClientLogout}>
+                <FontAwesomeIcon
+                  icon={faSignOut as IconProp}
+                  className="cursor-pointer h-6 text-white"
+                />
+              </button>
             )}
           </div>
         ) : instance == "client-query" || instance == "resource-query" ? (
@@ -113,23 +113,27 @@ export default function Navbar({ instance, username, avatarUrl }: Props) {
               </div>
             </small>
             {instance == "resource-query" ? (
-              <FontAwesomeIcon
-                icon={faAngleDoubleLeft as IconProp}
-                className="cursor-pointer text-white h-6"
-                id="logOutIcon"
+              <button
                 onClick={() => {
                   location.replace("/resource");
                 }}
-              />
+              >
+                <FontAwesomeIcon
+                  icon={faAngleDoubleLeft as IconProp}
+                  className="cursor-pointer text-white h-6"
+                />
+              </button>
             ) : (
-              <FontAwesomeIcon
-                icon={faAngleDoubleLeft as IconProp}
-                className="cursor-pointer h-6 text-white"
-                id="logOutIcon"
+              <button
                 onClick={() => {
                   location.replace("/client");
                 }}
-              />
+              >
+                <FontAwesomeIcon
+                  icon={faAngleDoubleLeft as IconProp}
+                  className="cursor-pointer h-6 text-white"
+                />
+              </button>
             )}
           </div>
         ) : (
