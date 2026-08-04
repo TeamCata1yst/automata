@@ -12,10 +12,10 @@ export default function Home() {
 
   const submitForm = async (e: any) => {
     e.preventDefault();
-    if (e.target.company.value === "none") {
-      alert("Please select a company");
-      return;
-    }
+    // if (e.target.company.value === "none") {
+    //   alert("Please select a company");
+    //   return;
+    // }
     const company = "Test Comp";
     const email = e.target.email.value;
     const pass = e.target.password.value;
