@@ -91,11 +91,10 @@ export default function Home() {
                 placeholder="Password"
                 className="w-96 p-2 px-4 bg-transparent outline-none border-b-2 border-transparent border-b-auto-red text-white focus:border-transparent focus:border-b-auto-red"
               />
-              <input
+              <button
                 type="submit"
-                value="Login ->"
                 className="w-max bg-auto-red p-2 px-12 rounded-md text-white cursor-pointer"
-              />
+              >Login -></button>
               <p className="text-white">
                 <Link href="/admin/login" className="text-auto-red">
                   Admin Login
