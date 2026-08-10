@@ -94,7 +94,7 @@ export default function Home() {
               <button
                 type="submit"
                 className="w-max bg-auto-red p-2 px-12 rounded-md text-white cursor-pointer"
-              >Login -></button>
+              >Login -&gt;</button>
               <p className="text-white">
                 <Link href="/admin/login" className="text-auto-red">
                   Admin Login
