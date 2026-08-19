@@ -12,10 +12,10 @@ export default function Home() {
 
   const submitForm = async (e: any) => {
     e.preventDefault();
-    // if (e.target.company.value === "none") {
-    //   alert("Please select a company");
-    //   return;
-    // }
+    if (e.target.company.value === "none") {
+      alert("Please select a company");
+      return;
+    }
     const company = "Test Comp";
     const email = e.target.email.value;
     const pass = e.target.password.value;
@@ -66,7 +66,7 @@ export default function Home() {
               onSubmit={submitForm}
               className="flex flex-col gap-6 items-center"
             >
-              {/*<select
+              <select
                 name="company"
                 className="w-96 p-2 px-4 bg-transparent outline-none border-b-2 border-transparent border-b-auto-red text-white focus:border-transparent focus:border-b-auto-red"
               >
@@ -78,7 +78,7 @@ export default function Home() {
                     </option>
                   );
                 })}
-              </select>*/}
+              </select>
               <input
                 type="email"
                 name="email"
