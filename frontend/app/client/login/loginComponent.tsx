@@ -8,7 +8,7 @@ import Link from "next/link";
 const api = process.env.NEXT_PUBLIC_APILINK;
 
 export default function Home() {
-  // const [companies, setCompanies] = useState([]);
+  const [companies, setCompanies] = useState([]);
 
   const submitForm = async (e: any) => {
     e.preventDefault();
